@@ -10,7 +10,9 @@ const transparentWhite = "rgba(255, 255, 255, 0.75)";
 const transparentBlack = "rgba(0, 0, 0, 0.75)";
 
 const audioDay = new Audio("media/birds.mp3");
-const audioNight = new Audio("media/birds.mp3"); //change
+audioDay.loop = true;
+const audioNight = new Audio("media/night.mp3");
+audioNight.loop = true; 
 const lightOn = new Audio("media/lightOn.mp3");
 const lightOff = new Audio("media/lightOff.mp3");
 
@@ -42,6 +44,7 @@ function setLightTheme() {
     });
 	
 	//music
+    audioNight.pause();
     audioDay.play();
     lightOn.play();
 
@@ -74,6 +77,7 @@ function setDarkTheme() {
 	document.getElementById('calc-input').style.backgroundColor = transparentBlack;
    
     //music
+    audioDay.pause();
     audioNight.play();
     lightOff.play();
 
