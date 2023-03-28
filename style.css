@@ -35,6 +35,7 @@
     flex-direction: row;
     position: fixed;
     padding: 0;
+    z-index: 5;
 }
 
 .menu button{
@@ -85,6 +86,10 @@
     color: black;
 }
 
+.side-side {
+    display: flex;
+    flex-direction: row;
+}
 
 #name {
     margin: 10px;
@@ -114,12 +119,15 @@ h2 {
 }
 
 #apresentacao {
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
     padding: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 50%;
 }
 
 p {
@@ -130,10 +138,12 @@ p {
 #calculator {
     margin: 10px;
     padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50%;
 }
 
 #calculator input {
@@ -149,4 +159,27 @@ p {
     min-width: 70px;
     border-style: solid;
     border-width: 2px;
+}
+
+#ap-calc {
+    position: absolute;
+    top: 100%;
+}
+
+@media only screen and (max-width: 950px) {
+    .side-side {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #apresentacao {
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    #calculator {
+        margin: 0;
+        width: 100%;
+    }
 }
