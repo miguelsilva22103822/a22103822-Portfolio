@@ -31,19 +31,13 @@
 
 .menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: 10px;
-
     position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0;
 }
 
-.menu > button{
+.menu button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,11 +45,35 @@
     margin: 5px;
     padding: 10px;
     font-size: 30px;
-    border-radius: 10px;
+    border-radius: 0px;
     min-height: 70px;
     min-width: 70px;
-    border-style: solid;
+    border-style: none;
     border-width: 2px;
+
+    margin: 0;
+}
+
+
+.right {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.left {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu a {
@@ -81,6 +99,20 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    font-size: 40px;
+}
+
+#calc-res-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calc-res-title p {
+    font-size: 40px;
+}
+
 #apresentacao {
     margin: 10px;
     padding: 10px;
@@ -93,4 +125,28 @@ h1 {
 p {
     margin: 20px;
     text-align: justify;
+}
+
+#calculator {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#calculator input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    min-height: 70px;
+    min-width: 70px;
+    border-style: solid;
+    border-width: 2px;
 }

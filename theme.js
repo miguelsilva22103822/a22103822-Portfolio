@@ -9,30 +9,45 @@ const white = "#ffffff";
 const transparentWhite = "rgba(255, 255, 255, 0.75)";
 const transparentBlack = "rgba(0, 0, 0, 0.75)";
 
+const audioDay = new Audio("media/birds.mp3");
+const audioNight = new Audio("media/birds.mp3"); //change
+const lightOn = new Audio("media/lightOn.mp3");
+const lightOff = new Audio("media/lightOff.mp3");
+
+const dayBG = new Image();
+dayBG.src = "media/bluenightskylight.png";
+const nightBG = new Image();
+nightBG.src = "media/bluenightsky.png";
+
 String: currentTheme = "Light";
 
-String: sunFilled = "<i class=\"fa-solid fa-sun\"></i>";
+String: sunFilled = "<i class=\"fa-solid fa-sun fa-sm\"></i>";
 //String: sunEmpty = "<i class=\"fa-regular fa-sun\"></i>";
-String: moonFilled = "<i class=\"fa-solid fa-moon\"></i>";
+String: moonFilled = "<i class=\"fa-solid fa-moon fa-sm\"></i>";
 //String: moonEmpty = "<i class=\"fa-regular fa-moon\"></i>";
 
 function setLightTheme() {
     //background and general color
     document.querySelector('html').style.backgroundColor = oxfordBlue;
     document.querySelector('html').style.color = black;
-    document.getElementById("background-image").style.backgroundImage = "url(media/bluenightskylight.png)";
+    document.getElementById("background-image").style.backgroundImage = "url(" + dayBG.src + ")";
+    document.querySelector(".menu").style.backgroundColor = transparentWhite;
 
     //menu buttons
-    let menuButtons = document.querySelectorAll('.menu > button');
+    let menuButtons = document.querySelectorAll('.menu button');
     menuButtons.forEach(function(button) {
         button.style.color = black;
-        button.style.backgroundColor = transparentWhite;
+        button.style.backgroundColor = "transparent";
+        button.style.color = black;
     });
+	
+	//music
+    audioDay.play();
+    lightOn.play();
 
-    let menuA = document.querySelectorAll('.menu > button a');
-    menuA.forEach(function(a) {
-        a.style.color = black;
-    });
+	//calc-input
+	document.getElementById('calc-input').style.color = black;
+	document.getElementById('calc-input').style.backgroundColor = transparentWhite;
 
     //theme button
     currentTheme = "Light";
@@ -43,19 +58,24 @@ function setDarkTheme() {
     //background and general color
     document.querySelector('html').style.backgroundColor = honoluluBlue;
     document.querySelector('html').style.color = white;
-    document.getElementById("background-image").style.backgroundImage = "url(media/bluenightsky.png)";
+    document.getElementById("background-image").style.backgroundImage = "url(" + nightBG.src + ")";
+    document.querySelector(".menu").style.backgroundColor = transparentBlack;
 
     //menu buttons
-    let menuButtons = document.querySelectorAll('.menu > button');
+    let menuButtons = document.querySelectorAll('.menu button');
     menuButtons.forEach(function(button) {
         button.style.color = white;
-        button.style.backgroundColor = transparentBlack;
+        button.style.backgroundColor = "transparent";
     });
 
-    let menuA = document.querySelectorAll('.menu > button a');
-    menuA.forEach(function(a) {
-        a.style.color = white;
-    });
+
+	//calc-input
+	document.getElementById('calc-input').style.color = white;
+	document.getElementById('calc-input').style.backgroundColor = transparentBlack;
+   
+    //music
+    audioNight.play();
+    lightOff.play();
 
     //theme button
     currentTheme = "Dark";
@@ -81,12 +101,12 @@ function buttonSetNormalColor(button) {
     if (currentTheme === "Dark") {
 
         button.style.color = white;
-        button.style.backgroundColor = transparentBlack;
+        button.style.backgroundColor = "transparent";
 
     } else if (currentTheme === "Light"){
         
         button.style.color = black;
-        button.style.backgroundColor = transparentWhite;
+        button.style.backgroundColor = "transparent";
 
     }
 }
@@ -118,4 +138,16 @@ buttons.forEach(function(button) {
 
 document.getElementById("jump-to-apresentacao").onclick = function() {
     document.getElementById("apresentacao").scrollIntoView({behavior: "smooth"});
+}
+
+document.getElementById("jump-to-calculator").onclick = function() {
+    document.getElementById("calculator").scrollIntoView({behavior: "smooth"});
+}
+
+document.getElementById("calc-input").onchange = function() {
+    if (this.value.length > 0) {
+        document.getElementById("calc-result").innerHTML = eval(this.value);
+    } else {
+        document.getElementById("calc-result").innerHTML = "0";
+    }
 }
