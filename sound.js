@@ -6,22 +6,24 @@ const muteSfx = new Audio("media/mute.mp3");
 
 document.getElementById("mutetoggle").innerHTML = soundOn;
 
-const test = new Audio("media/night.mp3");
+const piano = new Audio("media/piano.mp3");
 
-test.loop = true;
-test.play();
+piano.loop = true;
+piano.play();
 var mute = false;
 
 document.getElementById("mutetoggle").onclick = function() {
     if (mute) {
         document.getElementById("mutetoggle").innerHTML = soundOn;
         play.play();
-        test.play();
+        piano
+    .play();
         mute = false;
     } else {
         document.getElementById("mutetoggle").innerHTML = soundOff;
         muteSfx.play();
-        test.pause();
+        piano
+    .pause();
         mute = true;
     }
 }
