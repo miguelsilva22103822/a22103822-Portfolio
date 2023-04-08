@@ -5,13 +5,11 @@ const sun = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
 const moon = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
 
 var backgroundColor = "rgb(0, 0, 0)";
+var transparentBg = "rgba(0, 0, 0, 0.3)";
 var color = "rgb(255, 255, 255)";
-var accentColor = "rgb(0, 220, 255)";
+var accentColor = "rgb(0, 200, 0)";
 var elementBackgroundColor = "rgb(76, 76, 76)";
-document.documentElement.style.setProperty('--backgroundColor', backgroundColor);
-document.documentElement.style.setProperty('--color', color);
-document.documentElement.style.setProperty('--accentColor', accentColor);
-document.documentElement.style.setProperty('--elementBackgroundColor', elementBackgroundColor);
+setProperties();
 document.getElementById("themetoggle").innerHTML = moon;
 var currentTheme = "dark";
 
@@ -27,6 +25,7 @@ function setDarkTheme() {
     lightOff.play();
 
     backgroundColor = "rgb(0, 0, 0)";
+    transparentBg = "rgba(0, 0, 0, 0.5)";
     color = "rgb(255, 255, 255)";
     elementBackgroundColor = "rgb(76, 76, 76)";
 
@@ -39,6 +38,7 @@ function setLightTheme() {
     lightOn.play();
 
     backgroundColor = "rgb(255, 255, 255)";
+    transparentBg = "rgba(255, 255, 255, 0.5)";
     color = "rgb(0, 0, 0)";
     elementBackgroundColor = "rgb(179, 179, 179)";
 
@@ -49,6 +49,7 @@ function setLightTheme() {
 
 function setProperties() {
     document.documentElement.style.setProperty('--backgroundColor', backgroundColor);
+    document.documentElement.style.setProperty('--transparentBg', transparentBg);
     document.documentElement.style.setProperty('--color', color);
     document.documentElement.style.setProperty('--accentColor', accentColor);
     document.documentElement.style.setProperty('--elementBackgroundColor', elementBackgroundColor);
