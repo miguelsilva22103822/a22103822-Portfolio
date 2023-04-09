@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
     box-sizing: border-box;
@@ -153,18 +154,18 @@ h1 {
 
 
 @keyframes leftArrowUp {
-    0% {}
+    0% {transform: rotate(-240deg);}
 
     100% {
-        transform: rotate(-240deg);
+        
     }
 }
 
 @keyframes rightArrowUp {
-    0% {}
+    0% {transform: rotate(60deg);}
 
     100% {
-        transform: rotate(60deg);
+        
     }
 }
 
@@ -218,6 +219,7 @@ header {
     height: 100%;
 }
 
+/*
 .item1 {
     grid-area: item1;
     display: flex;
@@ -254,16 +256,19 @@ header {
     left: 0;
     right: 0;
     display: grid;
+    height: 100vh;
 
     grid-template-columns: 10vh 2.5fr 10vh;
-    grid-template-rows: 10vh 10fr 10fr 1fr;
+    grid-template-rows: 40vh 20vh 20vh 2fr 1fr auto;
 
     gap: 20px;
     padding: 20px;
 
     grid-template-areas:
-        "item1 item4 item3"
+        "item1 item1 item1"
         "item2 item2 item2"
+        "item3 item3 item3"
+        "item4 item4 item4"
         "item5 item5 item5"
         "item6 item6 item6";
 
@@ -273,4 +278,96 @@ header {
 .grid-item {
     padding: 0px;
     text-align: center;
+}
+*/
+
+.menu {
+    position: absolute;
+    background-color: var(--transparentBg);
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+
+    color: var(--backgroundColor);
+}
+
+.menu .cards {
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    top: 15%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.menu .card {
+    position: relative;
+    background-color: var(--color);
+    width: 275px;
+    height: 375px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu .image {
+    height: 50%;
+    border-radius: 8px 8px 0 0;
+}
+
+.menu .text {
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+}
+
+.menu .text h2, p, button {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-justify: distribute-all-lines;
+}
+
+.menu .text p {
+    margin-top: 10px;
+}
+
+.menu .button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 8px 8px;
+
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .button button {
+    width: 250px;
+    border: 2px solid;
+    color: var(--backgroundColor);
+    border-color: var(--backgroundColor);
+    background-color: var(--color);
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.intro-img {
+    background-image: url(media/bluenightsky.png);
+    background-size: cover;
+}
+
+.calc-img {
+    background-image: url(media/math.jpg);
+    background-size: cover;
 }
