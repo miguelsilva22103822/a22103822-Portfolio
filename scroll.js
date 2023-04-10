@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
     var scrollProgress = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
 
     // Set opacity of the element to be faded based on scroll progress
-    fadeElement.style.opacity = 1 - scrollProgress * 2; // Fade out element as scroll progresses
+    fadeElement.style.opacity = 1 - scrollProgress * 3; // Fade out element as scroll progresses
     fadeElement.style.height = 40 - scrollProgress * 37 + "%";
 });
 
@@ -15,6 +15,14 @@ window.addEventListener("scroll", function () {
 document.getElementById("arrow-down").addEventListener("click", function () {
     // Set target scroll position (adjust as needed)
     var targetScrollPos = window.innerHeight * 1; // Scroll down by 500 pixels
+
+    // Call custom smooth scroll function with speed curve
+    smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed
+});
+
+document.getElementById("calculator").addEventListener("click", function () {
+    // Set target scroll position (adjust as needed)
+    var targetScrollPos = window.innerHeight * 2; // Scroll down by 500 pixels
 
     // Call custom smooth scroll function with speed curve
     smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed

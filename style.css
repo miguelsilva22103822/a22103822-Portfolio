@@ -362,6 +362,10 @@ header {
     border-radius: 4px;
 }
 
+.menu .button button:hover {
+    background-color: var(--accentColor);
+}
+
 .intro-img {
     background-image: url(media/bluenightsky.png);
     background-size: cover;
@@ -370,4 +374,11 @@ header {
 .calc-img {
     background-image: url(media/math.jpg);
     background-size: cover;
+}
+
+.calculator-page {
+    position: absolute;
+    top: 200%;
+    width: 100vw;
+    height: 100vh;
 }
