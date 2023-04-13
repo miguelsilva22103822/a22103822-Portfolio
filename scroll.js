@@ -36,6 +36,14 @@ document.getElementById("arrow-up").addEventListener("click", function () {
     smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed
 });
 
+document.getElementById("arrow-up-low").addEventListener("click", function () {
+    // Set target scroll position (adjust as needed)
+    var targetScrollPos = window.innerHeight * 1; // Scroll down by 500 pixels
+
+    // Call custom smooth scroll function with speed curve
+    smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed
+});
+
 function smoothScrollTo(targetPosition, duration, timingFunction) {
     var startPosition = window.pageYOffset;
     var startTime = performance.now();

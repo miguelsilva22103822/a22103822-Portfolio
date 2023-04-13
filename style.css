@@ -42,6 +42,7 @@ h1 {
 
 #arrow-down:hover {
     animation-play-state: paused;
+    cursor: pointer;
 }
 
 .left {
@@ -112,6 +113,7 @@ h1 {
 
 #arrow-up:hover {
     animation-play-state: paused;
+    cursor: pointer;
 }
 
 .leftup {
@@ -169,6 +171,32 @@ h1 {
     }
 }
 
+#arrow-up-low {
+    position: absolute;
+    top: 190%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    animation: arrowUpLow 0.5s 1s infinite ease-out alternate;
+}
+
+#arrow-up-low:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+@keyframes arrowUpLow {
+    0% {
+        top: 203vh;
+    }
+
+    100% {
+        top: 206vh;
+    }
+}
+
 .roundbutton {
     display: flex;
     align-items: center;
@@ -186,6 +214,7 @@ h1 {
 }
 
 .roundbutton:hover {
+    cursor: pointer;
     background-color: var(--accentColor);
     color: var(--backgroundColor);
 }
@@ -363,6 +392,7 @@ header {
 }
 
 .menu .button button:hover {
+    cursor: pointer;
     background-color: var(--accentColor);
 }
 
@@ -377,8 +407,51 @@ header {
 }
 
 .calculator-page {
+    background-color: var(--transparentBg);
     position: absolute;
-    top: 200%;
+    top: 100%;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    position: relative;
+    background-color: var(--elementBackgroundColor);
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+}
+
+#screen {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+#calculator-buttons {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+#calculator-buttons div {
+    max-width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 2px;
+    background-color: var(--color);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
