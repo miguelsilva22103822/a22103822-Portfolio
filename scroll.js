@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
 
     // Set opacity of the element to be faded based on scroll progress
     fadeElement.style.opacity = 1 - scrollProgress * 3; // Fade out element as scroll progresses
-    fadeElement.style.height = 40 - scrollProgress * 37 + "%";
+    fadeElement.style.height = 80 - scrollProgress * 160 + "%";
 });
 
 // Smooth scrolling with speed curve

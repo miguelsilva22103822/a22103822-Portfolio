@@ -9,6 +9,7 @@
     <script src="theme.js" defer></script>
     <script src="sound.js" defer></script>
     <script src="scroll.js" defer></script>
+    <script src="calculator.js" defer></script>
     <script src="https://kit.fontawesome.com/a1320d93f1.js" crossorigin="anonymous"></script>
     <title>Miguel Silva</title>
 </head>
@@ -62,11 +63,11 @@
                 </div>
                 
                 <div class="button" id="introduction">
-                    <button>Read more</button>
+                    <button>Click to read more</button>
                 </div>
             </div>
     
-            <div class="card">
+            <div class="card" id="calculator">
                 <div class="image calc-img">
     
                 </div>
@@ -79,8 +80,8 @@
                     </p>
                 </div>
                 
-                <div class="button" id="calculator">
-                    <button>Read more</button>
+                <div class="button">
+                    <button>Click to try it</button>
                 </div>
             </div>
 
@@ -91,30 +92,30 @@
             <div id="screen"></div>
 
             <div id="calculator-buttons">
-                <div id="C">C/CE</div>
-                <div id="divide">÷</div>
-                <div id="sqrt">√ </div>
-                <div id="percent">%</div>
+                <button data-action="clear">C</button>
+                <button data-action="divide"><i data-action="divide" class="fa-solid fa-divide"></i></button>
+                <button data-action="sqrt"><i data-action="sqrt" class="fa-solid fa-square-root-variable"></i></button>
+                <button data-action="percent"><i data-action="percent" class="fa-solid fa-percent"></i></button>
     
-                <div id="7">7</div>
-                <div id="8">8</div>
-                <div id="9">9</div>
-                <div id="multiply">X</div>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button data-action="multiply"><i data-action="multiply" class="fa-solid fa-xmark"></i></button>
     
-                <div id="4">4</div>
-                <div id="5">5</div>
-                <div id="6">6</div>
-                <div id="minus">-</div>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button data-action="subtract"><i data-action="subtract" class="fa-solid fa-minus"></i></button>
     
-                <div id="1">1</div>
-                <div id="2">2</div>
-                <div id="3">3</div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button data-action="add"><i data-action="add" class="fa-solid fa-plus"></i></button>
                 
-                <div id="0">0</div>
-                <div id="point">.</div>
-                <div id="=">=</div>
+                <button>0</button>
+                <button data-action="decimal">.</button>
+                <button data-action="calculate"><i data-action="calculate" class="fa-solid fa-equals"></i></button>
     
-                <div id="plus">+</div>
             </div>
         </div>
     </div>
