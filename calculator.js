@@ -1,5 +1,6 @@
 const calculator = document.querySelector('.calculator')
 const keys = calculator.querySelector('#calculator-buttons')
+const screen = document.getElementById('screen');
 
 keys.addEventListener('click', e => {
  if (e.target.matches('button, i')) {
@@ -7,7 +8,7 @@ keys.addEventListener('click', e => {
     const action = key.dataset.action
 
     if (!action) {
-        console.log('number key!')
+        screen.innerHTML += key.innerHTML;
     }
 
     if (
@@ -18,22 +19,36 @@ keys.addEventListener('click', e => {
         action === 'sqrt' ||
         action === 'percent'
       ) {
-        console.log('operator key!')
+        switch(action) {
+            case 'add':
+                screen.innerHTML += "+";
+                break;
+            case 'subtract':
+                screen.innerHTML += "-";
+                break;
+            case 'multiply':
+                screen.innerHTML += "*";
+                break;
+            case 'divide':
+                screen.innerHTML += "/";
+                break;
+        }
     }
 
     if (action === 'decimal') {
-        console.log('decimal key!')
+        screen.innerHTML += "."
     }
       
     if (action === 'clear') {
-        console.log('clear key!')
+        screen.innerHTML = "";
     }
       
     if (action === 'calculate') {
-        console.log('equal key!')
+        screen.innerHTML = eval(screen.innerHTML);
     }
 
-
-
+    if(screen.innerHTML.length > 10 || screen.innerHTML === "undefined") {
+        screen.innerHTML = "";
+    }
  }
 })

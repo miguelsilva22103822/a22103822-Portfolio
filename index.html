@@ -10,6 +10,8 @@
     <script src="sound.js" defer></script>
     <script src="scroll.js" defer></script>
     <script src="calculator.js" defer></script>
+    <script src="datetime.js" defer></script>
+    <script src="displayedcontent.js" defer></script>
     <script src="https://kit.fontawesome.com/a1320d93f1.js" crossorigin="anonymous"></script>
     <title>Miguel Silva</title>
 </head>
@@ -42,14 +44,21 @@
     <div id="scroll-up-btn"></div>
 
     <header>
-        <button id="themetoggle" class="roundbutton"></button>
-        <button id="mutetoggle" class="roundbutton"></button>
+        <div>
+            <button id="themetoggle" class="roundbutton"></button>
+            <h2 id="time"></h2>
+        </div>
+
+        <div>
+            <h2 id="date"></h2>
+            <button id="mutetoggle" class="roundbutton"></button>
+        </div>
     </header>
     
     <div class="menu">
 
         <div class="cards">
-            <div class="card">
+            <div class="card" id="introduction">
                 <div class="image intro-img">
     
                 </div>
@@ -87,15 +96,15 @@
 
     </div>
 
-    <div class="calculator-page">
+    <div id="calculator-page">
         <div class="calculator">
             <div id="screen"></div>
 
             <div id="calculator-buttons">
                 <button data-action="clear">C</button>
                 <button data-action="divide"><i data-action="divide" class="fa-solid fa-divide"></i></button>
-                <button data-action="sqrt"><i data-action="sqrt" class="fa-solid fa-square-root-variable"></i></button>
-                <button data-action="percent"><i data-action="percent" class="fa-solid fa-percent"></i></button>
+                <button>(</button>
+                <button>)</button>
     
                 <button>7</button>
                 <button>8</button>
@@ -117,6 +126,16 @@
                 <button data-action="calculate"><i data-action="calculate" class="fa-solid fa-equals"></i></button>
     
             </div>
+        </div>
+    </div>
+
+    <div id="introduction-page">
+        <div class="text">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium.
+            </p>
         </div>
     </div>
 

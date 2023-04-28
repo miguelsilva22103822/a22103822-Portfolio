@@ -28,6 +28,14 @@ document.getElementById("calculator").addEventListener("click", function () {
     smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed
 });
 
+document.getElementById("introduction").addEventListener("click", function () {
+    // Set target scroll position (adjust as needed)
+    var targetScrollPos = window.innerHeight * 2; // Scroll down by 500 pixels
+
+    // Call custom smooth scroll function with speed curve
+    smoothScrollTo(targetScrollPos, 1000, "easeInOutQuad"); // Adjust duration and timing function as needed
+});
+
 document.getElementById("arrow-up").addEventListener("click", function () {
     // Set target scroll position (adjust as needed)
     var targetScrollPos = 0; // Scroll down by 500 pixels
