@@ -1,5 +1,6 @@
 const dateElement = document.getElementById("date");
 const timeElement = document.getElementById("time");
+const fullDateElement = document.getElementById("datetime")
 
 const date = new Date();
 
@@ -20,3 +21,4 @@ const formattedTime = date.toLocaleString("pt-PT", timeOptions);
 
 dateElement.innerHTML = formattedDate;
 timeElement.innerHTML = formattedTime;
+fullDateElement.innerHTML += formattedDate + " - " + formattedTime;

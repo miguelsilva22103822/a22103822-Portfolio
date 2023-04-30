@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Limelight&effect=outline');
 
 * {
     box-sizing: border-box;
@@ -306,7 +308,7 @@ header {
     flex-flow: column;
 }
 
-.menu .text h2, p, button {
+.menu .text h2, h3, p, button {
     font-family: 'Roboto Condensed', sans-serif;
     text-justify: distribute-all-lines;
 }
@@ -360,6 +362,11 @@ header div h2 {
 
 .calc-img {
     background-image: url(media/math.jpg);
+    background-size: cover;
+}
+
+.playground-img {
+    background-image: url(media/playground.png);
     background-size: cover;
 }
 
@@ -447,7 +454,7 @@ header div h2 {
     width: 50%;
     height: auto;
     background-color: var(--transparentBg2);
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,8 +465,14 @@ header div h2 {
     padding-bottom: 30px;
 }
 
-h2, p {
-    font-size: 1.3em;
+h2 {
+    font-size: 1.7em;
+    text-justify: newspaper;
+}
+
+
+p {
+    font-size: 1.1em;
     text-justify: newspaper;
 }
 
@@ -469,6 +482,32 @@ h2, p {
 
 .card > .button > button:hover {
     cursor: pointer;
+}
+
+#playground-page {
+    background-color: var(--transparentBg);
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playground-page > div {
+    max-width: 80%;
+    height: auto;
+    background-color: var(--transparentBg2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 765px) {
@@ -529,4 +568,55 @@ h2, p {
         margin-top: 10px;
         font-size: 1em;
     }
+}
+
+input {
+    font-family: 'Poppins', sans-serif;;
+    font-size: 18px;
+
+    margin-top: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 2px;
+}
+
+#imgwithtextover {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 25vw;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.memebuttons button {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--elementBackgroundColor);
+    color: var(--color);
+    border: 2px solid;
+    cursor: pointer;
+    min-width: 5vw;
+    min-height: 3vh;
+    border-radius: 3px;
+    border-color: var(--color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.memebuttons button:hover {
+    background-color: var(--accentColor);
+    color: var(--backgroundColor);
+}
+
+.meme-text {
+    font-family: 'Londrina Outline', cursive !important;
+    color: var(--accentColor2);
+    font-size: 2.3em;
 }

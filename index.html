@@ -12,6 +12,7 @@
     <script src="calculator.js" defer></script>
     <script src="datetime.js" defer></script>
     <script src="displayedcontent.js" defer></script>
+    <script src="playground.js" defer></script>
     <script src="https://kit.fontawesome.com/a1320d93f1.js" crossorigin="anonymous"></script>
     <title>Miguel Silva</title>
 </head>
@@ -94,6 +95,24 @@
                 </div>
             </div>
 
+            <div class="card" id="playground">
+                <div class="image playground-img">
+    
+                </div>
+                <div class="text">
+                    <h2>
+                        Playground
+                    </h2>
+                    <p>
+                        Some JavaScript exercises.
+                    </p>
+                </div>
+                
+                <div class="button">
+                    <button>Click to see more</button>
+                </div>
+            </div>
+
     </div>
 
     <div id="calculator-page">
@@ -136,6 +155,34 @@
                 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
                 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium.
             </p>
+        </div>
+    </div>
+
+    <div id="playground-page">
+        <div class="text">
+            <h2>JavaScript Playground</h2>
+            <br>
+            <h3>Make your meme</h3>
+            <p>Select an image for the meme:</p>
+            <div class="memebuttons">
+                <button id="meme1">Dog</button>
+                <button id="meme2">Shrek</button>
+                <button id="meme3">CJ</button>
+            </div>
+            <p>Insert a sentence for the meme:</p>
+            <input type="text" id="meme-text-input">
+            <p>Insert your name:</p>
+            <input type="text" id="name-input">
+            <br>
+            <div id="imgwithtextover">
+                <h2 class="font-effect-outline meme-text">Quando o professor Lucio pede para pôr uma frase motivacional</h2>
+            </div>
+            <p id="meme-author"></p>
+
+
+
+            <br>
+            <p id="datetime">Data atual: </p>
         </div>
     </div>
 

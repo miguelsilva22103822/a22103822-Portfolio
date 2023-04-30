@@ -9,6 +9,7 @@ var transparentBg = "rgba(0, 0, 0, 0.3)";
 var transparentBg2 = "rgba(0, 0, 0, 0.7)";
 var color = "rgb(255, 255, 255)";
 var accentColor = "rgb(0, 200, 0)";
+var accentColor2 = "rgb(175, 240, 0)";
 var elementBackgroundColor = "rgb(76, 76, 76)";
 setProperties();
 document.getElementById("themetoggle").innerHTML = moon;
@@ -56,5 +57,6 @@ function setProperties() {
     document.documentElement.style.setProperty('--transparentBg2', transparentBg2);
     document.documentElement.style.setProperty('--color', color);
     document.documentElement.style.setProperty('--accentColor', accentColor);
+    document.documentElement.style.setProperty('--accentColor2', accentColor2);
     document.documentElement.style.setProperty('--elementBackgroundColor', elementBackgroundColor);
 }
